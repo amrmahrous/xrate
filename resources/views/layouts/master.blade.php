@@ -7,9 +7,7 @@
         <title>@yield('title')</title>
         <!-- Bootstrap Core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/app.css" rel="stylesheet">
-        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        
+        <link href="css/app.css" rel="stylesheet">        
         @yield('style')  
     </head>
     <body >
