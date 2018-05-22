@@ -1,10 +1,7 @@
 <?php
 
 namespace App;
-
-use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client;
-use App\Exceptions\Handler;
 
 class fixerio {
 
@@ -17,12 +14,10 @@ class fixerio {
     }
 
     private function getRate($from, $to) {
-        $rate = null;
+        $rate = 0;
         if (!in_array($from, config('currencies')) || !in_array($to, config('currencies'))) {
             throw new \Symfony\Component\HttpKernel\Exception\HttpException(200, 'Error getting currency code from config file');
-            return $rate;
         }
-
         $client = new Client();
         $parameters['base'] = $from;
         $parameters['symbols'] = $to;
